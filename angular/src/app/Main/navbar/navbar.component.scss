@@ -1,25 +1,74 @@
 div.Menu {
     position: fixed;
-    width: 1200px;
-    margin-right: 0px;
     z-index: 1;
+    width: 1200px;
     top: 0px;
+}
+
+@media(max-width: 1232px) {
+    div.Menu {
+        right: 15px;
+        left: 15px;
+        width: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    div.Menu {
+        right: 0px;
+        left: 0px;
+        width: auto;
+    }
+     :host ::ng-deep {
+        .p-menubar {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        .p-submenu-list {}
+    }
 }
 
 div.p-menubar.p-component {}
 
+span {
+    text-decoration: none!important;
+    font-size: 13.2px;
+}
+
 :host ::ng-deep {
+    .navbar-brand {
+        margin-top: -50px;
+        height: 100%!important;
+    }
     .p-menubar {
+        padding: 0em;
+        display: flex;
         background-color: var(--black, rgb(0, 180, 275, 0.8));
         backdrop-filter: saturate(180%) blur(20px);
         border: 0px;
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
-        max-width: 1200px;
-        margin: 0px auto;
         font-size: 1.1em;
+        height: 71px;
     }
     .p-submenu-list {}
+    .p-menubar-end {
+        display: flex;
+        height: 40px;
+        align-items: center;
+    }
+    span.p-menuitem-icon {
+        color: var(--white, rgb(255, 255, 255))!important;
+    }
+    li.p-menuitem {
+        border-radius: 0px !important;
+    }
+    .p-menuitem-text {
+        color: var(--white, rgb(255, 255, 255))!important;
+    }
+    .pi-angle-down {
+        color: var(--white, rgb(255, 255, 255))!important;
+    }
 }
 
 div {
@@ -29,7 +78,7 @@ div {
         right: auto;
         left: auto;
         height: 75px;
-        width: 1200px;
+        width: 100%;
         padding-top: 5px;
         transform: translateY(60px);
         transition: transform 0.2s ease 0s;
@@ -45,7 +94,7 @@ div {
         left: auto;
         right: auto;
         height: 75px;
-        width: 1200px;
+        width: 100%;
         padding-top: 5px;
         background-color: rgb(34, 58, 93, 0.8);
         border-radius: 0px 0px calc(6px) calc(6px);
@@ -74,6 +123,7 @@ div {
         font-weight: 990;
     }
     >div.searchInput {
+        top: 0px;
         height: 100%;
         width: 100%;
         margin-left: 10px;
@@ -96,4 +146,270 @@ div {
 .p-inputtext:focus {
     border: 0px;
     box-shadow: none;
+}
+
+img.logo {
+    margin: 21.12px 0px;
+}
+
+a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0px 1.5em;
+    line-height: 5.4em;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    color: white;
+    margin-right: -1px;
+    >span.pi.pi-search {
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 990;
+    }
+}
+
+li {
+    list-style-type: none!important;
+}
+
+.iconSearchInmenu {
+    height: 100%;
+}
+
+.avatarOfUser {
+    height: 100%;
+}
+
+div.LinkiconSearchInmenuContainer {
+    height: 72px;
+}
+
+div.iconSearchInmenuContainer {
+    height: 72px;
+}
+
+a.LinkiconSearchInmenu {
+    line-height: 85px;
+}
+
+a.LinkSearchInmenu {
+    line-height: 70px;
+}
+
+img.avatarOfUser {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    align-self: center;
+}
+
+a.navbar-brand {
+    position: relative;
+    margin: 0px 1px 0px 0px;
+    display: block;
+    font-weight: 600;
+    padding: 0px 19.8px;
+    line-height: 5.4em;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    margin-right: -1px;
+}
+
+.brand {
+    display: inline-block;
+    margin: 0px 0.2em;
+}
+
+// for the li
+li.catalogue {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    width: 152px;
+    height: 5.4em;
+}
+
+// for the a 
+a.navbar-catalogue {
+    margin: 0px 1px 0px 0px;
+    display: block;
+    font-weight: 600;
+    padding: 0px 19.8px;
+    line-height: 5.4em;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    margin-right: -1px;
+    position: absolute;
+     ::after {
+        content: "";
+        position: absolute;
+        height: calc(100% - 2.4em);
+        top: 1.2em;
+        right: 0px;
+        width: 1px;
+        background-color: rgb(34, 58, 93);
+        z-index: 1;
+        display: block;
+    }
+}
+
+// for the icon
+.pi.pi-th-large {
+    align-items: center;
+    margin: 0px 0.2em;
+    font-size: 1.6em;
+    font-style: normal;
+    font-size: 1.6em;
+    font-weight: 100;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+
+// for the title
+.catalogue-title {
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    margin: 0px 0px 0px 2.64px;
+    text-decoration: none;
+    font-size: 1.02em;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-style: normal;
+}
+
+// for the a 
+a.navbar-news {
+    margin: 0px 1px 0px 0px;
+    display: block;
+    font-weight: 600;
+    padding: 0px 19.8px;
+    line-height: 5.4em;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    margin-right: -1px;
+    position: absolute;
+     ::after {
+        content: "";
+        position: absolute;
+        height: calc(100% - 2.4em);
+        top: 1.2em;
+        right: 0px;
+        width: 1px;
+        background-color: rgb(34, 58, 93);
+        z-index: 1;
+        display: block;
+    }
+}
+
+// for the icon
+.pi-bolt {
+    color: white;
+    align-items: center;
+    margin: 0px 0.2em;
+    font-size: 1.6em;
+    font-style: normal;
+    font-size: 1.6em;
+    font-weight: 100;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+
+// for the title
+.news-title {
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    margin: 0px 0px 0px 2.64px;
+    text-decoration: none;
+    font-size: 1.02em;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-style: normal;
+}
+
+// for the li
+li.news {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    width: 152px;
+    height: 5.4em;
+}
+
+// for the li
+li.series {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    width: 152px;
+    height: 5.4em;
+}
+
+// for the a 
+a.navbar-series {
+    margin: 0px 1px 0px 0px;
+    display: block;
+    font-weight: 600;
+    padding: 0px 19.8px;
+    line-height: 5.4em;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    margin-right: -1px;
+    position: absolute;
+     ::after {
+        content: "";
+        position: absolute;
+        height: calc(100% - 2.4em);
+        top: 1.2em;
+        right: 0px;
+        width: 1px;
+        background-color: rgb(34, 58, 93);
+        z-index: 1;
+        display: block;
+    }
+}
+
+// for the icon
+.pi-youtube {
+    color: white;
+    align-items: center;
+    margin: 0px 0.2em;
+    font-size: 1.6em;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+
+// for the title
+.series-title {
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    margin: 0px 0px 0px 2.64px;
+    text-decoration: none;
+    font-size: 1.02em;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-style: normal;
 }

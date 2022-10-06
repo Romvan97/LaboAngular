@@ -1,15 +1,81 @@
 <div class="Menu">
 
     <div class="navbar">
-        <p-menubar [model]="items">
-            <ng-template pTemplate="start">
-                <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2">
-            </ng-template>
-            <ng-template pTemplate="end">
-                <input type="text" pInputText placeholder="Search" (click)="onBlur()">
-                <button type="button" (click)="logout()" pButton label="Connexion" icon="pi pi-power-off" style="margin-left:.25em"></button>
-            </ng-template>
-        </p-menubar>
+        <div class="p-menubar">
+
+            <li class="brand">
+                <a class="navbar-brand" href="#">
+                    <img src="../../../assets/img/adn_logo_white.svg" class="logo" width="84px">
+                </a>
+            </li>
+
+
+            <li class="catalogue">
+                <a class="navbar-catalogue" href="#">
+                    <span class="pi pi-th-large"></span>
+                    <span class="catalogue-title">CATALOGUE</span>
+                </a>
+            </li>
+
+
+            <li class="news">
+                <a class="navbar-news" href="#">
+                    <span class="pi pi-bolt"></span>
+                    <span class="news-title">NOUVEAUTÉS</span>
+                </a>
+            </li>
+
+            <li class="series">
+                <a class="navbar-series" href="#">
+                    <span class="pi pi-youtube"></span>
+                    <span class="series-title">SÉRIES</span>
+                </a>
+            </li>
+
+            <li class="films">
+                <a class="navbar-series" href="#">
+                    <span class="pi pi-youtube"></span>
+                    <span class="series-title">FILMS</span>
+                </a>
+            </li>
+
+            <li class="watchlist">
+                <a class="navbar-brand" href="#">
+
+                </a>
+            </li>
+
+
+            <li class="TV">
+                <a class="navbar-brand" href="#">
+
+                </a>
+            </li>
+
+            <li class="white-space">
+                <a class="navbar-brand">
+
+                </a>
+            </li>
+
+
+
+            <li class="search">
+                <a class="LinkSearchInmenu">
+                    <span class="pi pi-search iconSearchInmenu"></span>
+                </a>
+            </li>
+
+            <li class="avatar" (click)="onBlur()">
+                <a class="LinkiconSearchInmenu">
+
+                    <img class="avatarOfUser" src="../../../assets/img/ch20_bg13_green0_188.jpg" (click)="logout()">
+                </a>
+            </li>
+
+
+
+        </div>
 
 
 
@@ -21,6 +87,7 @@
 
             <div class="searchIcon">
                 <span class="pi pi-search"></span>
+
             </div>
 
             <div class="searchInput">

@@ -26,6 +26,7 @@
                         "assets": [
                             "src/favicon.ico",
                             "src/assets"
+
                         ],
                         "styles": [
 
@@ -33,6 +34,7 @@
                             "node_modules/primeicons/primeicons.css",
                             "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
                             "node_modules/primeng/resources/primeng.min.css",
+
                             "src/styles.scss"
                         ],
                         "scripts": []
@@ -102,7 +104,9 @@
                             "node_modules/primeicons/primeicons.css",
                             "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
                             "node_modules/primeng/resources/primeng.min.css",
-                            "src/styles.scss"
+
+                            "src/styles.scss",
+                            "src/assets/fonts.scss"
                         ],
                         "scripts": []
                     }
