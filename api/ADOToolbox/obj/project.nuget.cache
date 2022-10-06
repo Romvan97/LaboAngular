@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cXsmQ6tjvJJNvqtnzQ7tzE+wS3jZJZpQHju485TP0igqexOIY0HPzE8tVktEk18seu91vGBhBkQq+z2Ocndu0A==",
+  "dgSpecHash": "dzd8BbgVXw+MIBRIBxPYbKvtVt/2XoXLt+NUcgaEbDDBBJ9KAyaHQMjJadj94tMgLJ/UGlovWqyYoGIrVLv6lQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\ADOToolbox\\ADOToolbox.csproj",
+  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\ADOToolbox\\ADOToolbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -12,10 +12,7 @@
     "C:\\Users\\vanmo\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\vanmo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

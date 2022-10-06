@@ -1,1 +1,32 @@
-<p>navbar works!</p>
+<div class="Menu">
+
+    <div class="navbar">
+        <p-menubar [model]="items">
+            <ng-template pTemplate="start">
+                <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2">
+            </ng-template>
+            <ng-template pTemplate="end">
+                <input type="text" pInputText placeholder="Search" (click)="onBlur()">
+                <button type="button" (click)="logout()" pButton label="Connexion" icon="pi pi-power-off" style="margin-left:.25em"></button>
+            </ng-template>
+        </p-menubar>
+
+
+
+
+    </div>
+
+    <div [ngClass]="{up: isBlur, down: !isBlur}">
+        <div class="subMenu">
+
+            <div class="searchIcon">
+                <span class="pi pi-search"></span>
+            </div>
+
+            <div class="searchInput">
+                <input class="InputText" type="text" pInputText placeholder="Search">
+            </div>
+
+        </div>
+    </div>
+</div>

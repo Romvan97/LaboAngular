@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\ADOToolbox\\ADOToolbox.csproj": {}
+    "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\ADOToolbox\\ADOToolbox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\ADOToolbox\\ADOToolbox.csproj": {
+    "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\ADOToolbox\\ADOToolbox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\ADOToolbox\\ADOToolbox.csproj",
+        "projectUniqueName": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\ADOToolbox\\ADOToolbox.csproj",
         "projectName": "ADOToolbox",
-        "projectPath": "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\ADOToolbox\\ADOToolbox.csproj",
+        "projectPath": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\ADOToolbox\\ADOToolbox.csproj",
         "packagesPath": "C:\\Users\\vanmo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\ADOToolbox\\obj\\",
+        "outputPath": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\ADOToolbox\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vanmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,20 +55,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WtfVY+6UzQF45fuAYr7x6BuYniugjXxcC5sY9uaUJIcrDjnxVDCZXmynmCwG4ySR5ifEbrGePa18bBxHwomnhg==",
+  "dgSpecHash": "y0Uc+pr/8GSA5V3X7s8hQSvS+uQRIngTDxfZU0Pn0vir9OZak0D4/AOqHlFnFmgAoATIuWU56Ex3/H7UGsaXpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\LocalModel\\LocalModel.csproj",
+  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\LocalModel\\LocalModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.9\\microsoft.extensions.configuration.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512",
@@ -14,10 +14,7 @@
     "C:\\Users\\vanmo\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\vanmo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

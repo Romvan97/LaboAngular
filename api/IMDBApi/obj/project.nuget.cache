@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K3hX2Fsnu7ZJzQRN0TrpRC4yxsXhmo+iSZPsBUARWzHmYQw3rBfwTVRu0m75WmMq4lPXDF5Zj/8uUdpTTJR6sg==",
+  "dgSpecHash": "sv5a7S5EDgM3cTTeIwGJj6Tl823O3jkDxdPytvp5FZnImESrbMhGjqk9Em6uO5994GoSsxgQ4owgaB9RKU4XcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\Cours technifutur\\LaboANGULAR\\MovieAPI-master\\IMDBApi\\IMDBApi.csproj",
+  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\IMDBApi\\IMDBApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.9\\microsoft.aspnetcore.authentication.jwtbearer.3.1.9.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

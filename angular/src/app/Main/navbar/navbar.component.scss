@@ -1,0 +1,99 @@
+div.Menu {
+    position: fixed;
+    width: 1200px;
+    margin-right: 0px;
+    z-index: 1;
+    top: 0px;
+}
+
+div.p-menubar.p-component {}
+
+:host ::ng-deep {
+    .p-menubar {
+        background-color: var(--black, rgb(0, 180, 275, 0.8));
+        backdrop-filter: saturate(180%) blur(20px);
+        border: 0px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        max-width: 1200px;
+        margin: 0px auto;
+        font-size: 1.1em;
+    }
+    .p-submenu-list {}
+}
+
+div {
+    >.down {
+        position: absolute;
+        top: 0px;
+        right: auto;
+        left: auto;
+        height: 75px;
+        width: 1200px;
+        padding-top: 5px;
+        transform: translateY(60px);
+        transition: transform 0.2s ease 0s;
+        background-color: rgb(34, 58, 93, 0.8);
+        border-radius: 0px 0px calc(6px) calc(6px);
+        backdrop-filter: saturate(180%) blur(20px);
+        box-sizing: border-box;
+        z-index: -1;
+    }
+    >.up {
+        position: absolute;
+        top: 0px;
+        left: auto;
+        right: auto;
+        height: 75px;
+        width: 1200px;
+        padding-top: 5px;
+        background-color: rgb(34, 58, 93, 0.8);
+        border-radius: 0px 0px calc(6px) calc(6px);
+        backdrop-filter: saturate(180%) blur(20px);
+        box-sizing: border-box;
+        transform: translateY(-101%);
+        transition: transform 0.2s ease 0.2s;
+        z-index: -1;
+    }
+    >div.subMenu {
+        display: flex;
+        margin: 15px auto;
+        margin-left: 15px;
+        margin-right: 15px;
+        height: 60%;
+    }
+    >div.searchIcon {
+        width: 50px;
+        height: 100%;
+    }
+    >span.pi.pi-search {
+        margin-left: 2px;
+        margin-top: 5px;
+        font-size: 2rem;
+        color: white;
+        font-weight: 990;
+    }
+    >div.searchInput {
+        height: 100%;
+        width: 100%;
+        margin-left: 10px;
+    }
+    >input.InputText {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(34, 58, 93, 0);
+        border: 0px;
+        color: white;
+    }
+    >input.InputText::placeholder {
+        color: white;
+    }
+     :focus {
+        border: 0px;
+    }
+}
+
+.p-inputtext:focus {
+    border: 0px;
+    box-shadow: none;
+}
