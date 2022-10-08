@@ -15,6 +15,8 @@ import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import {TabViewModule} from 'primeng/tabview';
 import {InputTextModule} from 'primeng/inputtext';
+import { RippleModule } from 'primeng/ripple';
+import{MatRippleModule} from '@angular/material/core'
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import {InputTextModule} from 'primeng/inputtext';
   ],
   imports: [
     BrowserModule,
-    
+    RippleModule,
     BrowserAnimationsModule, 
     TabViewModule,
     ButtonModule,
@@ -37,6 +39,7 @@ import {InputTextModule} from 'primeng/inputtext';
     CoreModule,
     MenubarModule,
     InputTextModule,
+    MatRippleModule,
     
   ],
   providers: [],

@@ -1,16 +1,16 @@
 <div class="Menu">
 
     <div class="navbar">
-        <div class="p-menubar">
+        <ul class="p-menubar">
 
             <li class="brand">
                 <a class="navbar-brand" href="#">
-                    <img src="../../../assets/img/adn_logo_white.svg" class="logo" width="84px">
+                    <img src="/assets/img/adn_logo_white.svg" class="logo" width="84px">
                 </a>
             </li>
 
 
-            <li class="catalogue">
+            <li *ngIf="!mobile" class="catalogue">
                 <a class="navbar-catalogue" href="#">
                     <span class="pi pi-th-large"></span>
                     <span class="catalogue-title">CATALOGUE</span>
@@ -18,69 +18,92 @@
             </li>
 
 
-            <li class="news">
+            <li *ngIf="!mobile" class="news">
                 <a class="navbar-news" href="#">
                     <span class="pi pi-bolt"></span>
                     <span class="news-title">NOUVEAUTÉS</span>
                 </a>
             </li>
 
-            <li class="series">
+            <li *ngIf="!mobile" class="series">
                 <a class="navbar-series" href="#">
                     <span class="pi pi-youtube"></span>
                     <span class="series-title">SÉRIES</span>
                 </a>
             </li>
 
-            <li class="films">
-                <a class="navbar-series" href="#">
-                    <span class="pi pi-youtube"></span>
-                    <span class="series-title">FILMS</span>
+            <li *ngIf="!mobile" class="films">
+                <a class="navbar-films" href="#">
+                    <span class="pi pi-video"></span>
+                    <span class="films-title">FILMS</span>
                 </a>
             </li>
 
-            <li class="watchlist">
-                <a class="navbar-brand" href="#">
-
+            <li *ngIf="!mobile" class="watchlist">
+                <a class="navbar-watchlist" href="#">
+                    <span class="pi pi-eye"></span>
+                    <span class="watchlist-title">MA WATCHLIST</span>
                 </a>
             </li>
 
 
-            <li class="TV">
-                <a class="navbar-brand" href="#">
-
+            <li *ngIf="!mobile" class="TV">
+                <a class="navbar-TV" href="#">
+                    <span class="pi pi-desktop"></span>
+                    <span class="TV-title">ADN TV+</span>
                 </a>
             </li>
+
+
+
 
             <li class="white-space">
-                <a class="navbar-brand">
 
-                </a>
             </li>
+
+
 
 
 
             <li class="search">
-                <a class="LinkSearchInmenu">
-                    <span class="pi pi-search iconSearchInmenu"></span>
-                </a>
-            </li>
 
-            <li class="avatar" (click)="onBlur()">
-                <a class="LinkiconSearchInmenu">
+                <a class="LinkSearchInmenu" [ngClass]="{LinkSearchInmenu: isBlur, LinkSearchInmenudown: !isBlur}" (click)="onBlur()">
 
-                    <img class="avatarOfUser" src="../../../assets/img/ch20_bg13_green0_188.jpg" (click)="logout()">
+                    <span *ngIf="isBlur" class="pi pi-search iconSearchInmenu"></span>
+                    <span *ngIf="!isBlur" class="pi pi-search iconSearchInmenudown"></span>
                 </a>
             </li>
 
 
+            <li class="avatar">
+                <a [ngClass]="{LinkiconSearchInmenu: isBlurAvatar, LinkiconSearchInmenudown: !isBlurAvatar}" (click)="onBlurAvatar()">
 
-        </div>
+                    <img *ngIf="isBlurAvatar" class="avatarOfUser" src="../../../assets/img/ch20_bg13_green0_188.jpg" (click)="logout()">
+
+                    <img *ngIf="!isBlurAvatar" class="avatarOfUserDown" src="../../../assets/img/ch20_bg13_green0_188.jpg" (click)="logout()">
+
+                </a>
+            </li>
+
+
+            <li *ngIf="mobile" class="menu-burger-main">
+
+                <a [ngClass]="{'menu-burger': isBlurBurgerMenu, 'menu-burgerdown': !isBlurBurgerMenu}" (click)="onBlurBurgerMenu()">
+                    <span class="pi pi-bars"></span>
+                </a>
+            </li>
+
+
+
+
+        </ul>
 
 
 
 
     </div>
+
+    <!-- SubMenu for the search item  -->
 
     <div [ngClass]="{up: isBlur, down: !isBlur}">
         <div class="subMenu">
@@ -96,4 +119,90 @@
 
         </div>
     </div>
+
+    <!-- SubMenu for the profile item -->
+
+    <div [ngClass]="{upAvatar: isBlurAvatar, downAvatar: !isBlurAvatar}">
+        <ul class="subMenuAvatar">
+
+            <li class="changeprofilMain" matRipple (mouseover)="launchRipple()">
+                <a class="changeprofil" href="#">CHANGER DE PROFIL</a>
+            </li>
+
+            <li class="compteMain" matRipple (mouseover)="launchRipplea()" [matRippleTrigger]="trigger" #trigger>
+                <a class="compte" href="#">GÉRER LE COMPTE</a>
+            </li>
+
+            <li class="monprofilMain" matRipple (mouseover)="launchRippleb()">
+                <a class="monprofil" href="#">GÉRER MON PROFIL</a>
+            </li>
+
+            <li class="ConnexionMain" matRipple (mouseover)="launchRipplec()">
+                <a class="Connexion" href="#">CONNEXION</a>
+            </li>
+
+            <!-- <li ngIf="" class="DeconnexionMain">
+                <a class="Deconnexion" href="#">DÉCONNEXION</a>
+            </li> -->
+
+        </ul>
+    </div>
+
+    <!-- SubMenu for the menu-burger item -->
+
+    <div [ngClass]="{upBurgerMenu: isBlurBurgerMenu, downBurgerMenu: !isBlurBurgerMenu}">
+        <ul class="subMenuBurgerMenu">
+
+
+
+            <li *ngIf="mobile" class="catalogueBurgerMenu">
+                <a class="navbar-catalogueBurgerMenu" href="#">
+                    <span class="pi pi-th-large BurgerMenu"></span>
+                    <span class="catalogue-titleBurgerMenu">CATALOGUE</span>
+                </a>
+            </li>
+
+
+            <li *ngIf="mobile" class="newsBurgerMenu">
+                <a class="navbar-newsBurgerMenu" href="#">
+                    <span class="pi pi-bolt BurgerMenu"></span>
+                    <span class="news-titleBurgerMenu">NOUVEAUTÉS</span>
+                </a>
+            </li>
+
+            <li *ngIf="mobile" class="seriesBurgerMenu">
+                <a class="navbar-seriesBurgerMenu" href="#">
+                    <span class="pi pi-youtube BurgerMenu"></span>
+                    <span class="series-titleBurgerMenu">SÉRIES</span>
+                </a>
+            </li>
+
+            <li *ngIf="mobile" class="filmsBurgerMenu">
+                <a class="navbar-filmsBurgerMenu" href="#">
+                    <span class="pi pi-video BurgerMenu"></span>
+                    <span class="films-titleBurgerMenu">FILMS</span>
+                </a>
+            </li>
+
+            <li *ngIf="mobile" class="watchlistBurgerMenu">
+                <a class="navbar-watchlistBurgerMenu" href="#">
+                    <span class="pi pi-eye BurgerMenu"></span>
+                    <span class="watchlist-titleBurgerMenu">MA WATCHLIST</span>
+                </a>
+            </li>
+
+
+            <li *ngIf="mobile" class="TVBurgerMenu">
+                <a class="navbar-TVBurgerMenu" href="#">
+                    <span class="pi pi-desktop BurgerMenu"></span>
+                    <span class="TV-titleBurgerMenu">ADN TV+</span>
+                </a>
+            </li>
+
+
+
+        </ul>
+    </div>
+
+
 </div>
