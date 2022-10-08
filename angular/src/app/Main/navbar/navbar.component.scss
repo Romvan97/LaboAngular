@@ -1677,3 +1677,40 @@
             overflow: hidden!important;
         }
     }
+    
+     :host ::ng-deep {
+        .p-inputtext:enabled:focus {
+            border: 0px!important;
+            box-shadow: none;
+        }
+        .p-inputtext:enabled:hover {
+            border: 0px!important;
+        }
+        .p-autocomplete {
+            width: 100%;
+        }
+        .p-inputtext {
+            background: none!important;
+            border: 0px!important;
+            color: white;
+            font-family: "Poppins";
+            font-weight: 100;
+            width: 100%;
+        }
+        .p-inputtext::placeholder {
+            color: white!important;
+            font-family: "Poppins";
+            font-weight: 100;
+        }
+        .p-autocomplete-items {
+            width: 100%;
+        }
+    }
+    
+     :host ::ng-deep {
+        div.navbar {
+            >ul>li:hover>a>span {
+                color: rgb(34, 58, 93)!important;
+            }
+        }
+    }

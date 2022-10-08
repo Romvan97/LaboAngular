@@ -114,7 +114,9 @@
             </div>
 
             <div class="searchInput">
-                <input class="InputText" type="text" pInputText placeholder="Search">
+
+
+                <p-autoComplete class="InputText" placeholder="Search" [(ngModel)]="text" [suggestions]="result" (completeMethod)="search($event)"></p-autoComplete>
             </div>
 
         </div>
@@ -125,19 +127,19 @@
     <div [ngClass]="{upAvatar: isBlurAvatar, downAvatar: !isBlurAvatar}">
         <ul class="subMenuAvatar">
 
-            <li class="changeprofilMain" matRipple (mouseover)="launchRipple()">
+            <li class="changeprofilMain" rippleOnHover>
                 <a class="changeprofil" href="#">CHANGER DE PROFIL</a>
             </li>
 
-            <li class="compteMain" matRipple (mouseover)="launchRipplea()" [matRippleTrigger]="trigger" #trigger>
+            <li class="compteMain" rippleOnHover>
                 <a class="compte" href="#">GÉRER LE COMPTE</a>
             </li>
 
-            <li class="monprofilMain" matRipple (mouseover)="launchRippleb()">
+            <li class="monprofilMain" rippleOnHover>
                 <a class="monprofil" href="#">GÉRER MON PROFIL</a>
             </li>
 
-            <li class="ConnexionMain" matRipple (mouseover)="launchRipplec()">
+            <li class="ConnexionMain" rippleOnHover>
                 <a class="Connexion" href="#">CONNEXION</a>
             </li>
 

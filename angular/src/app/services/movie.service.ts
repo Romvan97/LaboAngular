@@ -11,6 +11,7 @@ export class MovieService {
 
   constructor(private _client: HttpClient) { }
 
+ 
 
 getMovies(): Observable<Movie[]>{
   return this._client.get<Movie[]>(`${environment.apiUrl}api/Movie`)

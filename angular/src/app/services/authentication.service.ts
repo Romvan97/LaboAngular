@@ -10,7 +10,10 @@ import { UserLog } from '../Models/User/userLog.model';
 })
 export class AuthenticationService {
 
-  constructor(private _client: HttpClient) { }
+  constructor(private _client: HttpClient) {
+
+    
+   }
 
   
 

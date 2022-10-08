@@ -16,7 +16,10 @@ import { ButtonModule } from 'primeng/button';
 import {TabViewModule} from 'primeng/tabview';
 import {InputTextModule} from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
-import{MatRippleModule} from '@angular/material/core'
+import{MatRippleModule} from '@angular/material/core';
+import { CustomrippleDirective } from './Main/navbar/directives/customripple.directive'
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,6 +28,7 @@ import{MatRippleModule} from '@angular/material/core'
     NavbarComponent,
     HomeComponent,
     Page404Component,
+    CustomrippleDirective,
 
 
   ],
@@ -40,7 +44,8 @@ import{MatRippleModule} from '@angular/material/core'
     MenubarModule,
     InputTextModule,
     MatRippleModule,
-    
+    AutoCompleteModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
