@@ -20,7 +20,7 @@ import{MatRippleModule} from '@angular/material/core';
 import { CustomrippleDirective } from './Main/navbar/directives/customripple.directive'
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule } from '@angular/forms';
-
+import {AvatarModule} from 'primeng/avatar';
 
 @NgModule({
   declarations: [
@@ -46,6 +46,7 @@ import { FormsModule } from '@angular/forms';
     MatRippleModule,
     AutoCompleteModule,
     FormsModule,
+    AvatarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -39,17 +39,25 @@
                 </a>
             </li>
 
-            <li *ngIf="!mobile" class="watchlist">
+            <li *ngIf="!mobile && connected" class="watchlist">
                 <a class="navbar-watchlist" href="#">
                     <span class="pi pi-eye"></span>
                     <span class="watchlist-title">MA WATCHLIST</span>
                 </a>
             </li>
 
+            <li *ngIf="!mobile && !connected" class="free">
+                <a class="navbar-watchlist" href="#">
+                    <span class="pi pi-verified"></span>
+                    <span class="watchlist-title">GRATUIT</span>
+                </a>
+            </li>
+
+
 
             <li *ngIf="!mobile" class="TV">
                 <a class="navbar-TV" href="#">
-                    <span class="pi pi-desktop"></span>
+                    <span class="pi pi-stop-circle"></span>
                     <span class="TV-title">ADN TV+</span>
                 </a>
             </li>
@@ -74,13 +82,28 @@
                 </a>
             </li>
 
+            <li *ngIf="!connected" class="AbonnementMain">
+                <span>
+                <div class="AbonnementContainer">
+                    <a class="Abonnement">S'ABONNER</a>
+                </div>
+</span>
+            </li>
+
+
 
             <li class="avatar">
                 <a [ngClass]="{LinkiconSearchInmenu: isBlurAvatar, LinkiconSearchInmenudown: !isBlurAvatar}" (click)="onBlurAvatar()">
 
-                    <img *ngIf="isBlurAvatar" class="avatarOfUser" src="../../../assets/img/ch20_bg13_green0_188.jpg" (click)="logout()">
+                    <!-- Avatar si connecté -->
+                    <img *ngIf="isBlurAvatar && connected" class="avatarOfUser" src="../../../assets/img/ch20_bg13_green0_188.jpg">
 
-                    <img *ngIf="!isBlurAvatar" class="avatarOfUserDown" src="../../../assets/img/ch20_bg13_green0_188.jpg" (click)="logout()">
+                    <img *ngIf="!isBlurAvatar && connected" class="avatarOfUserDown" src="/assets/img/ch20_bg13_green0_188.jpg">
+
+                    <!-- Avatar si non connecté -->
+                    <p-avatar *ngIf="isBlurAvatar && !connected" class="avatarOfUser" shape="circle" icon="pi pi-user"></p-avatar>
+
+                    <p-avatar *ngIf="!isBlurAvatar && !connected" class="avatarOfUserDown" shape="circle" icon="pi pi-user"></p-avatar>
 
                 </a>
             </li>
@@ -139,13 +162,14 @@
                 <a class="monprofil" href="#">GÉRER MON PROFIL</a>
             </li>
 
-            <li class="ConnexionMain" rippleOnHover>
-                <a class="Connexion" href="#">CONNEXION</a>
+
+            <li *ngIf="!connected" class="ConnexionMain" rippleOnHover>
+                <a class="Connexion" (click)="login()">CONNEXION</a>
             </li>
 
-            <!-- <li ngIf="" class="DeconnexionMain">
-                <a class="Deconnexion" href="#">DÉCONNEXION</a>
-            </li> -->
+            <li *ngIf="connected" class="DeconnexionMain" rippleOnHover>
+                <a class="Deconnexion" (click)="logout()">DÉCONNEXION</a>
+            </li>
 
         </ul>
     </div>

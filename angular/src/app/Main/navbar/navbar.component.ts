@@ -6,11 +6,12 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/Models/Movie/movie.model';
+import {AvatarModule} from 'primeng/avatar';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss', './styles/styles/navbarnotconnected.component.scss']
 })
 
 
@@ -21,6 +22,9 @@ export class NavbarComponent implements OnInit {
   moviesForView: Movie[] = [];
 
   //   items!: MenuItem[];
+
+// Récupération du token pour voir si connecté ou non
+connected: boolean = false;
 
   // Savoir ce qui a été sélectionner
   isBlur = true;
@@ -109,9 +113,13 @@ export class NavbarComponent implements OnInit {
 
 
 
-  login(): void { }
+  login(): void {
+    this.connected = true;
+   }
 
-  logout(): void { }
+  logout(): void {
+    this.connected = false;
+   }
 
   ngOnInit(): void {
 
