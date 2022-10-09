@@ -93,7 +93,7 @@
 
 
             <li class="avatar">
-                <a [ngClass]="{LinkiconSearchInmenu: isBlurAvatar, LinkiconSearchInmenudown: !isBlurAvatar}" (click)="onBlurAvatar()" (click)="login()" href="#">
+                <a [ngClass]="{LinkiconSearchInmenu: isBlurAvatar, LinkiconSearchInmenudown: !isBlurAvatar}" (click)="onBlurAvatar()" (click)="login(false)" routerLink="/login" routerLinkActive="active">
 
                     <!-- Avatar si connecté -->
                     <img *ngIf="isBlurAvatar && connected" class="avatarOfUser" src="../../../assets/img/ch20_bg13_green0_188.jpg">
@@ -164,7 +164,7 @@
 
 
             <li *ngIf="!connected" class="ConnexionMain" rippleOnHover>
-                <a class="Connexion" (click)="login()">CONNEXION</a>
+                <a class="Connexion">CONNEXION</a>
             </li>
 
             <li *ngIf="connected" class="DeconnexionMain" rippleOnHover>

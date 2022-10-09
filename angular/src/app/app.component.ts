@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { NavbarService } from './services/navbar.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,12 +9,29 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent implements OnInit{
   title = 'ADN';
 
+// Récupération du token pour voir si connecté ou non
+connected: boolean = false;
 
-  constructor(private primengConfig: PrimeNGConfig) {}
+// navbar visible ou pas
+navbarVisibleApp?: boolean ;
+
+  constructor(//private primengConfig: PrimeNGConfig,
+  public _navbarService: NavbarService,
+  ) {}
 
     ngOnInit() {
-        this.primengConfig.ripple = true;
+
+    
+
+      localStorage.getItem('')
+      sessionStorage.getItem('')
+       // this.primengConfig.ripple = true;
     }
 
+
+    changeNavbarVisibility(value: boolean){
+      this.navbarVisibleApp = value;
+      this._navbarService.hide();
+    }
 
 }

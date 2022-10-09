@@ -7,6 +7,8 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/Models/Movie/movie.model';
 import {AvatarModule} from 'primeng/avatar';
+import {Output, EventEmitter} from '@angular/core';
+
 
 @Component({
   selector: 'app-navbar',
@@ -22,6 +24,11 @@ export class NavbarComponent implements OnInit {
   moviesForView: Movie[] = [];
 
   //   items!: MenuItem[];
+
+  
+  //visibilité de la navbar
+  @Output()
+  navbarVisibleEvent = new EventEmitter<boolean>();
 
 // Récupération du token pour voir si connecté ou non
 connected: boolean = false;
@@ -42,6 +49,7 @@ connected: boolean = false;
 
   constructor(private breakpoint$: BreakpointObserver, private _getMoviesService: MovieService
   ) {
+
 
 
     // Observe Breakpoint for menu mobile/pc
@@ -116,9 +124,8 @@ connected: boolean = false;
 
 
 
-  login(): void {
-    this.connected = true;
-    
+  login(value: boolean): void {
+    this.navbarVisibleEvent.emit(value);    
    }
 
   logout(): void {

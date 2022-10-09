@@ -21,6 +21,7 @@ import { CustomrippleDirective } from './Main/navbar/directives/customripple.dir
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule } from '@angular/forms';
 import {AvatarModule} from 'primeng/avatar';
+import { LoginComponent } from './Main/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {AvatarModule} from 'primeng/avatar';
     HomeComponent,
     Page404Component,
     CustomrippleDirective,
+    LoginComponent,
 
 
   ],

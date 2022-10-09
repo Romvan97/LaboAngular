@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Main/home/home.component';
 import { Page404Component } from './Main/page404/page404.component';
+import { LoginComponent } from './Main/pages/login/login.component';
 
 const routes: Routes = [
 
@@ -15,7 +16,7 @@ const routes: Routes = [
   //   path: 'exo', 
   //   loadChildren: () => import('./exo/exo.module').then(m => m.ExoModule)
   // },
-  
+  {path: 'login', component: LoginComponent},
 
   { path: '404', component: Page404Component },
   { path: '**', redirectTo: '404'}
