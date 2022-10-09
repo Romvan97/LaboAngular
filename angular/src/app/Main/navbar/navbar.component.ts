@@ -71,9 +71,12 @@ connected: boolean = false;
 
 
   onBlurAvatar() {
-    if (!this.isBlur || !this.isBlurBurgerMenu) {
+    if (!this.isBlur || !this.isBlurBurgerMenu ) {
       this.isBlur = true;
       this.isBlurBurgerMenu = true;
+    }
+    if(!this.connected){
+      this.isBlurAvatar = false
     }
     this.isBlurAvatar = !this.isBlurAvatar;
   }
@@ -115,10 +118,12 @@ connected: boolean = false;
 
   login(): void {
     this.connected = true;
+    
    }
 
   logout(): void {
     this.connected = false;
+    this.isBlurAvatar = true; // remonte le sous menu si se deco
    }
 
   ngOnInit(): void {
