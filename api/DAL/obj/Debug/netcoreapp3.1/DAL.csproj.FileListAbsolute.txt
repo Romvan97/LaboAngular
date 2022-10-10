@@ -83,3 +83,16 @@ C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\DAL\obj\Deb
 C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
 C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\bin\Debug\netcoreapp3.1\ADOToolbox.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\bin\Debug\netcoreapp3.1\ADOToolbox.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.AssemblyReference.cache
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

@@ -19,9 +19,13 @@ import { RippleModule } from 'primeng/ripple';
 import{MatRippleModule} from '@angular/material/core';
 import { CustomrippleDirective } from './Main/navbar/directives/customripple.directive'
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AvatarModule} from 'primeng/avatar';
 import { LoginComponent } from './Main/pages/login/login.component';
+import {KeyFilterModule} from 'primeng/keyfilter'
+import {PasswordModule} from 'primeng/password';
+import {CheckboxModule} from 'primeng/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +53,12 @@ import { LoginComponent } from './Main/pages/login/login.component';
     AutoCompleteModule,
     FormsModule,
     AvatarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    KeyFilterModule,
+    PasswordModule,
+    CheckboxModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -86,3 +86,18 @@ C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\LocalModel\
 C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.csproj.CopyComplete
 C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.dll
 C:\Users\vanmo\Desktop\Cours technifutur\LaboANGULAR\MovieAPI-master\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\LocalModel.deps.json
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\LocalModel.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\LocalModel.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\ADOToolbox.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\bin\Debug\netcoreapp3.1\ADOToolbox.pdb
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.csproj.AssemblyReference.cache
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.AssemblyInfoInputs.cache
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.AssemblyInfo.cs
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.csproj.CoreCompileInputs.cache
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.csproj.CopyComplete
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.dll
+C:\Users\vanmo\Desktop\LaboAngularRepos\api\LocalModel\obj\Debug\netcoreapp3.1\LocalModel.pdb

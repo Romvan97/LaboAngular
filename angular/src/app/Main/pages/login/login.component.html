@@ -4,8 +4,81 @@
         <div class="reducer-container">
             <div class="container">
 
-            </div>
-        </div>
 
+
+
+                <a href="/">
+                    <img src="/assets/img/adn_logo_blue.png" class="adn-logo-blue">
+                </a>
+                <h3>CONNECTEZ-VOUS</h3>
+
+
+
+
+
+
+
+
+                <div class="form-container">
+                    <form [formGroup]="form" (ngSubmit)="onLogin()">
+
+                        <div>
+                            <label for="login-email" class="label-email">
+                                <span>Email :</span>
+                            </label>
+                            <input pInputText type="email" formControlName="loginEmail" />
+
+                            <div *ngIf="">
+                                <span>Ce champ est obligatoire</span>
+                                <span>Email invalide</span>
+                            </div>
+
+                            <p class="pseudo-oublie">
+                                <a>Pseudo oublié ?</a>
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <label for="login-password" class="label-password">
+                                <span>Mot de passe :</span>
+                            </label>
+                            <p-password [toggleMask]="true" formControlName="loginPassword"></p-password>
+
+                            <div *ngIf="">
+                                <span>Ce champ est obligatoire</span>
+                                <span>Mot de passe invalide</span>
+                            </div>
+
+                            <p class="pseudo-oublie">
+                                <a>Mot de passe oublié ?</a>
+                            </p>
+
+                        </div>
+
+
+                        <div>
+                            <div>
+                                <p-checkbox type="checkbox" formControlName="loginRememberMe" (click)="changeValue()"></p-checkbox>
+                                <label for="rememberMe">Se souvenir de moi</label>
+                            </div>
+
+                            <button type="submit" class="btnSubmit">
+                            CONNEXION
+                        </button>
+
+
+                        </div>
+                    </form>
+
+
+                    <p>Nouveau sur ADN ?
+                        <a> S'inscrire</a>
+                    </p>
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>

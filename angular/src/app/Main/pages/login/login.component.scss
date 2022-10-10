@@ -26,7 +26,6 @@ div {
             height: 570px;
             >.container {
                 border: 0.1px solid white;
-                padding: 15px;
                 margin-top: 0px;
                 justify-content: center;
             }
@@ -41,4 +40,41 @@ div {
         margin-top: 8px;
         margin-bottom: 8px;
     }
+}
+
+a:link {
+    color: rgb(0, 149, 255);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+* {
+    font-family: "Poppins";
+    font-weight: 100;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 2.1em;
+    margin: 0px 0px 16px;
+    line-height: 1.3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+div.form-container {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 270px;
+    height: 335px!important;
+    text-align: center;
+    border: 1px solid red;
 }

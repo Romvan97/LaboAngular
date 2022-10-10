@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -14,34 +15,44 @@ namespace DAL.Repository
     public class UserRepo : BaseRepository, IUserRepository<User>
     {
 
-        public UserRepo(IConfiguration config): base(config)
+        public UserRepo(IConfiguration config) : base(config)
         {
         }
 
         public bool? CheckUser(User u)
         {
-            string Query = "SELECT Id FROM [User] WHERE Email = @email AND Password = @pass";
+
+            string Query = "SELECT * FROM [User] WHERE Email = @email AND Password = @pass";
             Command cmd = new Command(Query);
             cmd.AddParameter("email", u.Email);
             cmd.AddParameter("pass", u.Password);
 
-            int Id;
+            int Id = 0;
+
+
             try
             {
-               Id = (int)_connection.ExecuteScalar(cmd);
+                User a = _connection.ExecuteReader(cmd, Converters.Convert).FirstOrDefault();
+                if (a != null)
+                {
+                    return true;
+                }
+                return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Id = 0;
-                throw new Exception(e.Message);
+
+                throw new ArgumentException(e.Message);
             }
-               
-            
-           
-            if(Id > 0)
+
+
+
+
+
+            if (Id > 0)
             {
-                Command checkActive = new Command("SELECT Id FROM [User] WHERE Id = "+Id+" AND IsActive = 1");
-                
+                Command checkActive = new Command("SELECT Id FROM [User] WHERE Id = " + Id + " AND IsActive = 1");
+
 
                 if ((int)_connection.ExecuteScalar(checkActive) > 0) return true;
                 else return false;
@@ -50,7 +61,7 @@ namespace DAL.Repository
             {
                 return null;
             }
-            
+
         }
 
         public User GetByEmail(string email)
