@@ -5,12 +5,15 @@ import { UserLog } from 'src/app/Models/User/userLog.model';
 import { LoginService } from 'src/app/services/login.service';
 import { NavbarService } from 'src/app/services/navbar.service';
 import { login_Form } from './formulaire/login.form';
+import { Router } from '@angular/router';
+import { Message, MessageService } from 'primeng/api';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [MessageService]
 })
 export class LoginComponent implements OnInit {
 
@@ -18,12 +21,17 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   userLog!: UserLog;
   logInfo: LoginInfo = {};
-rememberMe: boolean = false;
+  rememberMe: boolean = false;
+
+  
+
 
   constructor(
     private _navbarService: NavbarService,
     private _loginService: LoginService,
-    builder: FormBuilder
+    builder: FormBuilder,
+    private _router: Router,
+    private _messageService: MessageService,
   ) {
     this.form = builder.group(login_Form);
   }
@@ -37,32 +45,57 @@ rememberMe: boolean = false;
 
   onLogin(): void {
 
+   
+
+
     if (this.form.valid) {
       this.logInfo.email = this.form.value.loginEmail
       this.logInfo.password = this.form.value.loginPassword
-    
+
 
       this._loginService.loginPost(this.logInfo).subscribe({
-       next: (userInfo) => this.userLog = userInfo,
-       error: (error) => alert("un problème est survenu"),
-       complete: () => {
-        console.log(this.rememberMe)
+        next: (userInfo) => this.userLog = userInfo,
+        error: (error) =>  this._messageService.add({ key: 'msg', severity: 'error', summary: 'Erreur', detail: 'Email ou mot de passe invalide.'}),
+        complete: () => {
 
-       }
-       });
-       
-      
-     
+          if (this.rememberMe) {
+            localStorage.setItem('currentUser', JSON.stringify(this.userLog))
+          }
+          else {
+            sessionStorage.setItem('currentUser', JSON.stringify(this.userLog))
+          }
+
+          this._router.navigate(['/home'])
+        }
+      });
 
     }
 
-    else this.isValid = false;
-  }
+    else {
+      this.isValid = false;
+      this._messageService.add({ key: 'msg', severity: 'error', summary: 'Erreur', detail: 'Vous devez remplir tous les champs.' })
 
 
-  changeValue(){
-    this.rememberMe == false ? this.rememberMe = true : this.rememberMe = false;
-    console.log(this.rememberMe)
-  }
+    }
+  
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+

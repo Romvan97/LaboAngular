@@ -25,6 +25,9 @@ import { LoginComponent } from './Main/pages/login/login.component';
 import {KeyFilterModule} from 'primeng/keyfilter'
 import {PasswordModule} from 'primeng/password';
 import {CheckboxModule} from 'primeng/checkbox';
+import {MessageModule} from 'primeng/message';
+import {MessagesModule} from 'primeng/messages';
+import {ToastModule} from 'primeng/toast';
 
 
 @NgModule({
@@ -58,6 +61,9 @@ import {CheckboxModule} from 'primeng/checkbox';
     KeyFilterModule,
     PasswordModule,
     CheckboxModule,
+    MessageModule,
+MessagesModule,
+ToastModule,
 
   ],
   providers: [],

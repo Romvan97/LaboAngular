@@ -1,3 +1,6 @@
+<p-toast></p-toast>
+<p-toast position="top-right" key="msg"></p-toast>
+
 <div class="main-container">
     <div class="elements-container">
 
@@ -14,24 +17,18 @@
 
 
 
-
-
-
-
-
                 <div class="form-container">
                     <form [formGroup]="form" (ngSubmit)="onLogin()">
 
-                        <div>
+                        <div class="email-container">
                             <label for="login-email" class="label-email">
                                 <span>Email :</span>
                             </label>
-                            <input pInputText type="email" formControlName="loginEmail" />
+                            <input id="inputEmail" pInputText type="email" formControlName="loginEmail" [email]="true" aria-describedby="email-help" />
 
-                            <div *ngIf="">
-                                <span>Ce champ est obligatoire</span>
-                                <span>Email invalide</span>
-                            </div>
+
+                            <p-message severity="error" text="Le champ est invalide"></p-message>
+
 
                             <p class="pseudo-oublie">
                                 <a>Pseudo oublié ?</a>
@@ -39,45 +36,44 @@
                         </div>
 
 
-                        <div>
+                        <div class="password-container">
                             <label for="login-password" class="label-password">
                                 <span>Mot de passe :</span>
                             </label>
-                            <p-password [toggleMask]="true" formControlName="loginPassword"></p-password>
+                            <p-password id="inputPassword" [feedback]="false" [toggleMask]="true" formControlName="loginPassword" class="pass p-inputwrapper-focus"></p-password>
 
-                            <div *ngIf="">
-                                <span>Ce champ est obligatoire</span>
-                                <span>Mot de passe invalide</span>
-                            </div>
+                            <p-message severity="error" text="Le champ est invalide"></p-message>
 
-                            <p class="pseudo-oublie">
+                            <p class="password-oublie">
                                 <a>Mot de passe oublié ?</a>
                             </p>
 
                         </div>
 
 
-                        <div>
-                            <div>
-                                <p-checkbox type="checkbox" formControlName="loginRememberMe" (click)="changeValue()"></p-checkbox>
-                                <label for="rememberMe">Se souvenir de moi</label>
+                        <div class="checkbox-container">
+                            <div class="p-field-checkbox">
+                                <p-checkbox formControlName="loginRememberMe" [(ngModel)]="rememberMe" [binary]="true"></p-checkbox>
+                                <label class="loginremember" for="rememberMe">Se souvenir de moi</label>
                             </div>
 
-                            <button type="submit" class="btnSubmit">
-                            CONNEXION
-                        </button>
 
 
                         </div>
+
+                        <button type="submit" class="btnSubmit">
+                            CONNEXION
+                       </button>
+
+
                     </form>
-
-
-                    <p>Nouveau sur ADN ?
-                        <a> S'inscrire</a>
-                    </p>
-
-
                 </div>
+
+                <p class="newOnAdn">Nouveau sur ADN ?
+                    <a href="#" class="inscription"> S'inscrire</a>
+                </p>
+
+
             </div>
 
         </div>

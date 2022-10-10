@@ -6,8 +6,10 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/Models/Movie/movie.model';
-import {AvatarModule} from 'primeng/avatar';
-import {Output, EventEmitter} from '@angular/core';
+import { AvatarModule } from 'primeng/avatar';
+import { Output, EventEmitter } from '@angular/core';
+import { UserLog } from 'src/app/Models/User/userLog.model';
+import { ConnectionService } from 'src/app/services/connection.service';
 
 
 @Component({
@@ -25,13 +27,13 @@ export class NavbarComponent implements OnInit {
 
   //   items!: MenuItem[];
 
-  
+
   //visibilité de la navbar
   @Output()
   navbarVisibleEvent = new EventEmitter<boolean>();
 
-// Récupération du token pour voir si connecté ou non
-connected: boolean = false;
+  // Récupération du token pour voir si connecté ou non
+  connected: boolean = false;
 
   // Savoir ce qui a été sélectionner
   isBlur = true;
@@ -42,12 +44,19 @@ connected: boolean = false;
   mobile?: boolean;
 
   // variables pour l'autocompletion
-  text?: string; 
+  text?: string;
   result: string[] = []; // suggestions qui vont être retournées
   filmNameList: string[] = []; // Liste des films pour autocompletion
 
+  // utilisateur du localstorage
+  localStorageUser!: UserLog;
 
-  constructor(private breakpoint$: BreakpointObserver, private _getMoviesService: MovieService
+  //utilisateur connecté
+  currentUser!: UserLog;
+
+  constructor(private breakpoint$: BreakpointObserver,
+    private _getMoviesService: MovieService,
+    private _connectionInfoService: ConnectionService,
   ) {
 
 
@@ -79,11 +88,11 @@ connected: boolean = false;
 
 
   onBlurAvatar() {
-    if (!this.isBlur || !this.isBlurBurgerMenu ) {
+    if (!this.isBlur || !this.isBlurBurgerMenu) {
       this.isBlur = true;
       this.isBlurBurgerMenu = true;
     }
-    if(!this.connected){
+    if (!this.connected) {
       this.isBlurAvatar = false
     }
     this.isBlurAvatar = !this.isBlurAvatar;
@@ -102,10 +111,10 @@ connected: boolean = false;
 
 
   // Permet de rechercher des suggestions
-  search(event){
-    
+  search(event) {
+
     let suggestionsFinales: string[] = [];
-  
+
     this.filmNameList.forEach(filmName => {
 
       let filmNameLowerCaser = filmName.toLowerCase();
@@ -115,26 +124,32 @@ connected: boolean = false;
 
     });
 
-    if(suggestionsFinales != null){
-        this.result = suggestionsFinales;
+    if (suggestionsFinales != null) {
+      this.result = suggestionsFinales;
     }
-  
-    
+
+
   }
 
 
 
   login(value: boolean): void {
-    this.navbarVisibleEvent.emit(value);    
-   }
+    this.navbarVisibleEvent.emit(value);
+  }
 
   logout(): void {
+
+    localStorage.removeItem('currentUser');
+    sessionStorage.removeItem('currentUser');
+
     this.connected = false;
     this.isBlurAvatar = true; // remonte le sous menu si se deco
-   }
+  }
 
   ngOnInit(): void {
 
+    this.connected = this._connectionInfoService.isConnected;
+    this.currentUser = this._connectionInfoService.User;
 
     this._getMoviesService.getMovies().subscribe({
 
@@ -143,13 +158,14 @@ connected: boolean = false;
         this.moviesForView = m;
 
         // Initialisation de la liste des suggestions possibles
-      this.moviesForView.forEach(element => {
-        this.filmNameList.push(element.title)
+        this.moviesForView.forEach(element => {
+          this.filmNameList.push(element.title)
 
-       });}
+        });
+      }
     })
 
-  
+
 
 
   }

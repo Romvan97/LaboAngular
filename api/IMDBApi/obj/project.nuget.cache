@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sv5a7S5EDgM3cTTeIwGJj6Tl823O3jkDxdPytvp5FZnImESrbMhGjqk9Em6uO5994GoSsxgQ4owgaB9RKU4XcA==",
+  "dgSpecHash": "6sR1ZQiguWN2SHIOjy8mBi0YR2mE8Ag4x72enXN/Xsly/OlYe9Pf545tjjE+4scBGDx8AcKYa+7cWdDW2YMUiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\LaboAngularRepos\\api\\IMDBApi\\IMDBApi.csproj",
+  "projectFilePath": "C:\\Users\\vanmo\\Desktop\\LaboAngulRepos\\api\\IMDBApi\\IMDBApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.9\\microsoft.aspnetcore.authentication.jwtbearer.3.1.9.nupkg.sha512",
     "C:\\Users\\vanmo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
