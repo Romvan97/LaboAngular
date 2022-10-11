@@ -4,7 +4,7 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 // autocomplete d'angulgar material
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { MovieService } from 'src/app/services/movie.service';
+import { MovieService } from 'src/app/services/API_Services/movie.service';
 import { Movie } from 'src/app/Models/Movie/movie.model';
 import { AvatarModule } from 'primeng/avatar';
 import { Output, EventEmitter } from '@angular/core';
@@ -59,7 +59,7 @@ export class NavbarComponent implements OnInit {
     private _connectionInfoService: ConnectionService,
   ) {
 
-
+   
 
     // Observe Breakpoint for menu mobile/pc
     this.breakpoint$.observe(["(max-width: 700px)"]).subscribe((result: BreakpointState) => {
@@ -148,8 +148,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.connected = this._connectionInfoService.isConnected;
     this.currentUser = this._connectionInfoService.User;
+    this.connected = this._connectionInfoService.isConnected;
+    
 
     this._getMoviesService.getMovies().subscribe({
 

@@ -19,6 +19,10 @@ namespace LocalModel.Tools
 
         public static local.Movie toLocal(this dal.Movie m, IMovieRepository<dal.Movie, dal.Actor> _movieService, IPersonRepository<dal.Person, dal.ActIn> _personService)
         {
+            if (m == null)
+            {
+                return null;
+            }
             return new local.Movie
             {
                 Id = m.Id,
@@ -33,6 +37,10 @@ namespace LocalModel.Tools
 
         public static local.Person toLocal(this dal.Person p)
         {
+            if (p == null)
+            {
+                return null;
+            }
             return new local.Person
             {
                 Id = p.Id,
@@ -43,6 +51,10 @@ namespace LocalModel.Tools
 
         public static dal.Person toDal(this local.Person p)
         {
+            if (p == null)
+            {
+                return null;
+            }
             return new dal.Person
             {
                 Id = p.Id,
@@ -53,6 +65,10 @@ namespace LocalModel.Tools
 
         public static local.CompletePerson toCPerson(this dal.Person p, IMovieRepository<dal.Movie, dal.Actor> _movieService, IPersonRepository<dal.Person, dal.ActIn> _personService)
         {
+            if (p == null)
+            {
+                return null;
+            }
             return new local.CompletePerson
             {
                 Id = p.Id,
@@ -68,6 +84,10 @@ namespace LocalModel.Tools
 
         public static dal.Movie toDal(this local.NewMovie m)
         {
+            if (m == null)
+            {
+                return null;
+            }
             return new dal.Movie
             {
                 Id = m.Id,
@@ -81,6 +101,10 @@ namespace LocalModel.Tools
 
         public static local.Actor toLocal(this dal.Actor a)
         {
+            if (a == null)
+            {
+                return null;
+            }
             return new local.Actor
             {
                 Id = a.Id,   
@@ -92,6 +116,10 @@ namespace LocalModel.Tools
 
         public static local.ActIn toLocal(this dal.ActIn a)
         {
+            if (a == null)
+            {
+                return null;
+            }
             return new local.ActIn
             {
                 Role = a.Role,
@@ -102,7 +130,11 @@ namespace LocalModel.Tools
 
         public static local.User toLocal(this dal.User u)
         {
-            return new local.User
+            if(u == null)
+            {
+                return null;
+            }
+            else return new local.User
             {
                 Id = u.Id,
                 Email = u.Email,
@@ -117,6 +149,10 @@ namespace LocalModel.Tools
 
         public static dal.User toDal(this local.User u)
         {
+            if (u == null)
+            {
+                return null;
+            }
             return new dal.User
             {
                 Id = u.Id,
@@ -132,6 +168,10 @@ namespace LocalModel.Tools
 
         public static local.Comment toLocal(this dal.Comment c)
         {
+            if (c == null)
+            {
+                return null;
+            }
             return new local.Comment
             {
                 Id = c.Id,
@@ -143,6 +183,10 @@ namespace LocalModel.Tools
         }
         public static dal.Comment toDal(this local.Comment c)
         {
+            if (c == null)
+            {
+                return null;
+            }
             return new dal.Comment
             {
                 Id = c.Id,

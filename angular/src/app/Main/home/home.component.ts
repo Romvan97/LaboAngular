@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { count, Subscription } from 'rxjs';
 import { Movie } from 'src/app/Models/Movie/movie.model';
-import { MovieService } from 'src/app/services/movie.service';
+import { MovieService } from 'src/app/services/API_Services/movie.service';
 import { NavbarService } from 'src/app/services/navbar.service';
 
 

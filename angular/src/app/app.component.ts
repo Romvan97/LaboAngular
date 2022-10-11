@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { ConnectionService } from './services/connection.service';
 import { NavbarService } from './services/navbar.service';
 
 @Component({
@@ -18,14 +19,13 @@ navbarVisibleApp?: boolean ;
 
   constructor(//private primengConfig: PrimeNGConfig,
   public _navbarService: NavbarService,
+  private _connectionService: ConnectionService
   ) {}
 
     ngOnInit() {
 
-    
+      this.connected = this._connectionService.isConnected
 
-      localStorage.getItem('')
-      sessionStorage.getItem('')
        // this.primengConfig.ripple = true;
     }
 

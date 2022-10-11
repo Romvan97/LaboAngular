@@ -168,11 +168,14 @@ namespace IMDBApi
             }
 
             app.UseRouting();
+
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
+
             app.UseAuthorization();
             
 
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            
 
             app.UseEndpoints(endpoints =>
             {
